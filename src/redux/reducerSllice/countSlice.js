@@ -7,8 +7,13 @@ export const coutSlice = createSlice({
   name: "count",
   initialState,
   reducers: {
-    increment: (state, action) => {},
-    decrement: (state, action) => {},
+    increment: (state, action) => {
+      console.log("hi")
+      state.count++
+    },
+    decrement: (state, action) => {
+        state.count--;
+    },
   },
 });
 export const { increment, decrement } = coutSlice.actions;
